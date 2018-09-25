@@ -3,7 +3,7 @@
 Image blending algorithm using OpenCV with Python.
 
 ## Input A:
-![alt text](https://i.stack.imgur.com/nbY7B.jpg | width=48))
+![alt text](https://i.stack.imgur.com/nbY7B.jpg))
 
 ## Input B:
 ![alt text](https://i.stack.imgur.com/i2rj7.jpg)
