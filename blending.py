@@ -3,7 +3,6 @@ import numpy as np
 
 
 def pyramid_blend(A, B, m, num_levels):
-
     # 1) Find the Gaussian Pyramids for given images and mask.
     GA = A.copy()
     GB = B.copy()
@@ -42,19 +41,16 @@ def pyramid_blend(A, B, m, num_levels):
     # 4) Blend images according to mask in each level.
     LS = []
     for la, lb, gm in zip(lpA, lpB, gpMr):
-
         ls = la * gm + lb * (1.0 - gm)
         LS.append(ls)
 
     # 5) Reconstruct
     ls_ = LS[0]
     for i in xrange(1, num_levels):
-
         # Need resize from the same reason as in (2)
         size = (LS[i].shape[1], LS[i].shape[0])
         ls_ = cv2.pyrUp(ls_, dstsize=size)
         ls_ = cv2.add(ls_, np.float32(LS[i]))
-
 
     return ls_
 
