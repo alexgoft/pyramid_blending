@@ -1,7 +1,5 @@
 # Pyramid Blending
 
-Image blending algorithm using OpenCV with Python.
-
 ## Input A:
 ![alt text](https://i.stack.imgur.com/nbY7B.jpg))
 
